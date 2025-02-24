@@ -1,6 +1,7 @@
 function prepare(ctx, manifest) {
-  const cookies = ctx.cookies;
-  alert(cookies)
+  const document = ctx.doc;
+  const cookies = document.cookie;
+
   try {
     // Auth Token
     manifest.request.set("authToken", cookies);
@@ -9,7 +10,6 @@ function prepare(ctx, manifest) {
     );
   } catch (e) {
     console.error("Error in getBody:", e);
-    alert(e);
     return false;
   }
 }

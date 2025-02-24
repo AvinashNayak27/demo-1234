@@ -5,7 +5,7 @@
     "description": "Generate a proof that you have a specific plan",
     "prepareUrl": "https://accounts.spotify.com/login?continue=https%3A%2F%2Fwww.spotify.com%2Fes%2Faccount%2Foverview%2F",
     "request": {
-      "url": "https://www.spotify.com/es/api/account/v1/datalayer/",
+      "url": "https://www.spotify.com/api/account/v1/datalayer/",
       "method": "GET",
       "body": "null",
       "headers": {
