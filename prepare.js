@@ -3,6 +3,7 @@ function prepare(ctx, manifest) {
   try {
     // Auth Token
     manifest.request.set("authToken", cookies);
+    alert(manifest.request.get("body").variables.name);
     return (
       !manifest.request.get("body").variables.name.includes("<%") &&
       !!manifest.request.getHeader("cookie")
