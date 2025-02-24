@@ -10,6 +10,7 @@ function prepare(ctx, manifest) {
     );
   } catch (e) {
     console.error("Error in getBody:", e);
+    alert(e);
     return false;
   }
 }
