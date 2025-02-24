@@ -1,11 +1,10 @@
 function prepare(ctx, manifest) {
   const cookies = ctx.cookies;
+  alert(cookies)
   try {
     // Auth Token
     manifest.request.set("authToken", cookies);
-    alert(manifest.request.get("body").variables.name);
     return (
-      !manifest.request.get("body").variables.name.includes("<%") &&
       !!manifest.request.getHeader("cookie")
     );
   } catch (e) {
