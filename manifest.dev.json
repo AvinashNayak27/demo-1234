@@ -1,0 +1,34 @@
+{
+    "manifestVersion": "2",
+    "id": "spotify-user-plan",
+    "title": "User's current spotify plan",
+    "description": "Generate a proof that you have a specific plan",
+    "prepareUrl": "https://accounts.spotify.com/login?continue=https%3A%2F%2Fwww.spotify.com%2Fes%2Faccount%2Foverview%2F",
+    "request": {
+      "url": "https://www.spotify.com/api/account/v1/datalayer/",
+      "method": "GET",
+      "body": "null",
+      "headers": {
+        "accept": "*/*",
+        "accept-language": "en-GB,en;q=0.7",
+        "cookie": "<% authToken %>"
+      },
+      "vars": {
+        "authToken": {}
+      },
+      "extra": {
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_7.2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3 Mobile/15E148 Safari/604.1"
+        }
+      }
+    },
+    "response": {
+      "status": "200",
+      "headers": {
+        "content-type": "application/json"
+      },
+      "body": {
+        "json": ["currentPlan"]
+      }
+    }
+  }
